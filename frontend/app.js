@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     return;
                 }
                 
-                const response = await fetch('http://localhost:8080/api/problems', {
+                const response = await fetch('https://problem-tracker-cbth.onrender.com/api/problems', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

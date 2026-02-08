@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (filterStatus && filterStatus.value) params.append('status', filterStatus.value);
             if (sortBy) params.append('sortBy', sortBy.value);
             
-            const response = await fetch(`http://localhost:8080/api/problems?${params.toString()}`, {
+            const response = await fetch(`https://problem-tracker-cbth.onrender.com/api/problems?${params.toString()}`, {
                 headers: getAuthHeader()
             });
             
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function() {
     async function handleViewProblem(e) {
         const id = e.currentTarget.getAttribute('data-id');
         try {
-            const response = await fetch(`http://localhost:8080/api/problems/${id}`, {
+            const response = await fetch(`https://problem-tracker-cbth.onrender.com/api/problems/${id}`, {
                 headers: getAuthHeader()
             });
             
@@ -356,7 +356,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const row = e.currentTarget.closest('tr');
         
         try {
-            const response = await fetch(`http://localhost:8080/api/problems/${id}`, {
+            const response = await fetch(`https://problem-tracker-cbth.onrender.com/api/problems/${id}`, {
                 method: 'DELETE',
                 headers: getAuthHeader()
             });

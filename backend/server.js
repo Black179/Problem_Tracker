@@ -17,7 +17,7 @@ app.use(cors({
     if (!origin) return callback(null, true); // mobile apps
     const allowedOrigins = [
       'http://localhost:3000',
-      'https://your-frontend.vercel.app',
+      'https://problem-tracker-nu.vercel.app/',
     ];
     if (allowedOrigins.some(o => origin.includes(o))) callback(null, true);
     else callback(null, true); // allow others in development
